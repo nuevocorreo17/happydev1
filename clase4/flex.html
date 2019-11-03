@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<link rel="stylesheet" href="css/normalize.css">
+	<style>
+		section
+		{
+			height: 100vh;
+			background-color: grey;
+			display: flex;
+			
+			/*align-items: flex-start;*/
+			/*align-items: flex-end;*/
+			/*align-items: stretch; solo funciona cuando los hijos no tienen un alto fijo*/
+			align-items: center;
+			/*align-content: center;*/
+			/*align-content: space-between;*/
+/*			align-content: flex-start;*/
+		/*	align-content: flex-end;*/
+		/*align-content: space-around;*/
+		/*align-content: space-evenly;*/
+		/*align-content: center; si utilizamos align-self en los items, no usar align-content*/
+
+			/*justify-content: flex-start;*/
+			/*justify-content: flex-end;*/
+			/*justify-content: space-between;*/
+			/*justify-content: space-around;*/
+			justify-content: center;
+			/*flex-wrap: nowrap;*/
+			flex-wrap: wrap;
+		/*	flex-direction: row-reverse;
+			flex-direction: column;
+			flex-direction: column-reverse;*/
+			flex-direction: row;
+		}
+
+		.cuadrados
+		{
+			
+			height: 100px;
+			background-color: black;
+			color: white;
+			border: 1px solid #fff;
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+		}
+
+		.cuadrado1
+		{
+			/*align-self: flex-start;*/
+			/*order: 3;*/
+			width: 100px
+		}
+
+		.cuadrado2
+		{
+			/*align-self: flex-end;*/
+			/*order: 2;*/
+			flex-grow: 1;
+		}
+
+		.cuadrado3
+		{
+			/*align-self: center;*/
+			/*order: 1;*/
+			flex-grow: 2;
+
+		}
+	</style>
+</head>
+<body>
+	<section>
+		<div class="cuadrados cuadrado1">1</div>
+		<div class="cuadrados cuadrado2">2</div>
+		<div class="cuadrados cuadrado3">3</div>
+		
+	</section>
+</body>
+</html>
