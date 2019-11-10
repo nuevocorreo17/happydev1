@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+		<script src="https://kit.fontawesome.com/37ef4fca07.js" crossorigin="anonymous"></script>	
+	<style>
+		section
+		{
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			flex-wrap: wrap;
+		}
+		.cuadrado
+		{
+			width: 100px;
+			height: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			background-color: red;
+			color: #fff;
+			margin: 15px;
+			cursor: pointer;
+			transition: all .4s ease;
+		}
+
+		.cuadrado.grande
+		{
+			width: 200px;
+			height: 200px;
+			background-color: green;
+		}
+
+		.trama
+		{
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			top: 0;
+			left: 0;
+			display: none;
+			background-color: rgba(0,0,0,.5);
+		}
+
+		.trama.open
+		{
+			display: block;
+		}		
+
+		.contenedor-img
+		{
+			width: 80%;
+			height: auto;
+			position: fixed;
+			top:50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			display: none;
+		}
+
+		.contenedor-img.open
+		{
+			display: block;
+		}
+
+
+		.contenedor-img img
+		{
+			width: 100%;
+			height: auto;
+		}
+
+		.contenedor-img .cerrar
+		{
+			width: 40px;
+			height: 40px;
+			color: #fff;
+			text-decoration: none;
+			background-color: #000;
+			border-radius: 100px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			position: absolute;
+			top: -20px;
+			right: -20px;
+		}	
+
+		.titulo-acordion
+		{
+			position: relative;
+			padding: 10px 40px 10px 20px;
+			margin: 0;
+			border-bottom: 1px solid #000;
+			background-color: #ddd;
+			color: #000;
+			width: 100%;
+			cursor: pointer;
+		}	
+
+		.titulo-acordion i
+		{
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+		}	
+
+		.cuerpo-acordion
+		{
+			padding: 20px;
+			background-color: #fff;
+			color: #000;
+			display: none;
+		}					
+	</style>
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery-ui.js"></script>
+</head>
+<body>
+	<section>
+		<div class="cuadrado">1</div>
+	</section>
+	<a href="#" class="boton-agregar-clase">Agregar clase</a>
+	<a href="#" class="boton-eliminar-clase">Eliminar clase</a>
+
+	<a href="#" class="boton-agregarquitar-clase">Agregarc / Eliminar clase</a>
+
+	<a href="#" class="mostrar-lightbox">Mostrar Lightbox</a>
+	<a href="#" class="mostrar-lightbox-carino">Mostrar Lightbox Cariño</a>
+	<a href="#" class="animar">Animar</a>
+	<section class="acordion">
+		<h3 class="titulo-acordion">Titulo 1<i class="fas fa-chevron-down"></i></h3>
+		<div class="cuerpo-acordion">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<h3 class="titulo-acordion">Titulo 2<i class="fas fa-chevron-down"></i></h3>
+		<div class="cuerpo-acordion">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<h3 class="titulo-acordion">Titulo 3<i class="fas fa-chevron-down"></i></h3>
+		<div class="cuerpo-acordion">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>
+		<h3 class="titulo-acordion">Titulo 4<i class="fas fa-chevron-down"></i></h3>
+		<div class="cuerpo-acordion">
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+			quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+		</div>		
+	</section>
+	<div class="trama"></div>
+	<div class="contenedor-img">
+		<img src="img/banner.jpg">
+		<a href="#" class="cerrar">X</a>
+	</div>
+	<script src="js/jqueryintermedio.js"></script>
+</body>
+</html>
